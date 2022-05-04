@@ -1,0 +1,91 @@
+---
+title: "Exercise 1, Keel Scruton"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Load required packages and import data
+
+```{r}
+#install.packages("readr")
+library(tidyverse)
+data <- read_csv('/Users/keelscruton/Desktop/Org Network Analysis/2022-ona-assignments/Exercises/ex1/Connections.csv')
+```
+
+Here we want to obtain the counts of by employer and total count as well. 
+
+```{r}
+#Counts by employer 
+library(dplyr)
+data %>% count(Company) %>% arrange(-n)
+#Total count is the length of the data frame (data), can also be counted using count function. 
+count(data)
+
+```
+
+Next we create nodes and edges data frames, these will be used with igraph. 
+
+The first step will be to create a new data set that is the unique contacts (first name + letter of first name) this is the node list (or dataframe)
+
+```{r}
+
+#Make a column with the first name and first letter of the last name (first_last as variable name)
+
+data$first_last <- paste(data$`First Name`,substr(data$`Last Name`,1,1))
+```
+
+```{r}
+#create a distinct list of all contact first_last names, name this column label. 
+nodes <- data %>%
+  distinct(`first_last`) %>%
+  rename(label = first_last)
+
+#set a unique ID value. 
+nodes <- nodes %>% rowid_to_column("id")
+
+```
+
+The next step is to create the Edge List
+```{r}
+
+edges =data %>% select(first_last, Company) %>%
+  inner_join(., select(., first_last, Company), by = "Company") %>%
+  rename(INDIVIDUAL1 = first_last.x, INDIVIDUAL2 = first_last.y) %>%
+  filter(INDIVIDUAL1 != INDIVIDUAL2) %>%
+  unique #%>% select(-Company)
+
+#want to replace each name with the unique id's made
+
+edges2 <- edges %>% 
+  left_join(nodes, by = c("INDIVIDUAL1" = "label")) %>% 
+  rename(person1 = id)
+
+edges2 <- edges2 %>% 
+  left_join(nodes, by = c("INDIVIDUAL2" = "label")) %>% 
+  rename(person2 = id)
+
+edges_final <- select(edges2,person1,person2)
+
+```
+
+
+Now we can plot the network 
+
+```{r}
+library(tidygraph)
+library(ggraph)
+
+routes_tidy <- tbl_graph(nodes = nodes, edges = edges_final, directed = FALSE)
+
+routes_tidy %>% 
+  activate(edges) 
+
+
+ggraph(routes_tidy) + geom_edge_link() + geom_node_point() + theme_graph()
+```
+
+
+
