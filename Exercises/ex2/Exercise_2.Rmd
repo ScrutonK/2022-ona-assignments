@@ -37,7 +37,7 @@ print(closeness)
 For evaluating which seat is best I will take into account degree and closeness.  Should note that the only seats available are ABCD (the last 4 in each list printed above) based on degree B,C and D all have the same degree. Based on the closeness which is how central or close a node is to all other nodes B and C have the highest values and are equal (more desirable centrality). Based on this analysis seats B or C are equivalently connected to the other seats on the bus. 
 
 
-Should note that if you select B you risk that D, C and A are not filled, if you select C you also risk that D B and A are not filled so each option has equal risk and as such either of them can be selected.
+Should note that if you select B you risk that D, C and A are not filled, if you select C you also risk that D B and A are not filled so each option has equal risk and as such either of them can be selected. 
 
 
 Now we can plot the network. 
