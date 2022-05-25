@@ -286,7 +286,7 @@ Create advice networks from `edges_sample` and calculate centrality scores for e
 examiner_dis = distinct(subset(applications, select=c(examiner_art_unit, examiner_id)))
 examiner_dis$group = substr(examiner_dis$examiner_art_unit, 1,3)
 #get rid of all examiners except those in group 161 or 162
-examiner_dis = examiner_dis[examiner_dis$group==161 | examiner_aus$group==162,]
+examiner_dis = examiner_dis[examiner_dis$group==161 | examiner_dis$group==162,]
 
 ```
 
