@@ -1,6 +1,6 @@
 ---
 title: "Ex4_Keel_Scruton"
-output: github_document
+output: Github_document
 ---
 
 ```{r setup, include=FALSE}
@@ -190,24 +190,29 @@ examiner_dis = examiner_dis[examiner_dis$group==161 | examiner_dis$group==162,]
 Now that we have a list of the examiners who are part of work groups 161 and 162 we can combine (merge) it with the edge list (edges) this will allow us to form our subset network. 
 
 ```{r}
-edges_examiner = merge(x=edges, y=examiner_dis, by.x="ego_examiner_id", by.y="examiner_id", all.x=TRUE)
-edges_examiner = edges_examiner %>% rename(ego_au=examiner_art_unit, ego_group=group)
+#edges_examiner = merge(x=edges, y=examiner_dis, by.x="ego_examiner_id", by.y="examiner_id", all.x=TRUE)
+#edges_examiner = edges_examiner %>% rename(ego_au=examiner_art_unit, ego_group=group)
 
-edges_examiner = merge(x=edges_examiner, y=examiner_dis, by.x="alter_examiner_id", by.y="examiner_id", all.x=TRUE)
-edges_examiner = edges_examiner %>% rename(alter_au=examiner_art_unit, alter_group=group)
+#edges_examiner = merge(x=edges_examiner, y=examiner_dis, by.x="alter_examiner_id", by.y="examiner_id", all.x=TRUE)
+#edges_examiner = edges_examiner %>% rename(alter_au=examiner_art_unit, alter_group=group)
 
-edges_examiner = drop_na(edges_examiner) #drop all na, ie values not in the selected workgroups. 
+#edges_examiner = drop_na(edges_examiner) #drop all na, ie values not in the selected workgroups. 
 
+
+
+
+
+##^^^ ERROR HAPPENING HERE I HAVE COMMENTED IT OUT SO THAT I CAN KNIT IT. 
 ```
 
 Now the above data set has the edges of alter and ego examiners. we can next create the list of nodes for both the ego and alter examiners. 
 
 ```{r}
-Ego_nodes = subset(edges_examiner, select=c(ego_examiner_id,ego_au, ego_group)) %>% rename(examiner_id=ego_examiner_id,art_unit=ego_au,group=ego_group)
+#Ego_nodes = subset(edges_examiner, select=c(ego_examiner_id,ego_au, ego_group)) %>% rename(examiner_id=ego_examiner_id,art_unit=ego_au,group=ego_group)
 
-Alter_nodes = subset(edges_examiner, select=c(alter_examiner_id,alter_au, alter_group))%>% rename(examiner_id=alter_examiner_id,art_unit=alter_au,group=alter_group)
+#Alter_nodes = subset(edges_examiner, select=c(alter_examiner_id,alter_au, alter_group))%>% rename(examiner_id=alter_examiner_id,art_unit=alter_au,group=alter_group)
 
-Nodes_full = distinct(rbind(Ego_nodes, Alter_nodes))
+#Nodes_full = distinct(rbind(Ego_nodes, Alter_nodes))
 
 #Nodes_full is a list of all the distinct examiners involved in the advice network
 
@@ -217,17 +222,17 @@ Now we can create the graph network.
 ```{r}
 #ran into error where i had duplicated vertex names, to fix take the first instances only in the nodes list. 
 
-Nodes_full = Nodes_full %>% group_by(examiner_id) %>% summarise(examiner_id=first(examiner_id), art_unit=first(art_unit), group=first(group))
+#Nodes_full = Nodes_full %>% group_by(examiner_id) %>% summarise(examiner_id=first(examiner_id), art_unit=first(art_unit), group=first(group))
 
-network <- graph_from_data_frame(d=edges_examiner, vertices=Nodes_full, directed=TRUE)
+#network <- graph_from_data_frame(d=edges_examiner, vertices=Nodes_full, directed=TRUE)
 ```
 
 ```{r}
-Degree <- degree(network)
-Closeness <- closeness(network)
+#Degree <- degree(network)
+#Closeness <- closeness(network)
 #merge back into the dataframe...
-comp <- data.frame(Nodes_full, Degree, Closeness)  
-applications_final <- merge(x=applications, y=comp, by='examiner_id', all.x=TRUE)
+#comp <- data.frame(Nodes_full, Degree, Closeness)  
+#applications_final <- merge(x=applications, y=comp, by='examiner_id', all.x=TRUE)
 ```
 
 Note: ran into an error above: Vector memory exhausted, not sure how to approach this differently to avoid having such a big data set being merged.  note that the lm() work would look something like the following but the code does not run. 
