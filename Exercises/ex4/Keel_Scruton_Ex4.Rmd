@@ -1,6 +1,6 @@
 ---
 title: "Ex4_Keel_Scruton"
-output: Github_document
+output: github_document
 ---
 
 ```{r setup, include=FALSE}
