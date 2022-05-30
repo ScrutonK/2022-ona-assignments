@@ -1,6 +1,6 @@
 ---
 title: "Exercise_3_ONA_Keel_Scruton"
-output: github_document
+output: pdf_document
 ---
 
 Import/load all required packages. 
