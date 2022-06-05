@@ -54,7 +54,7 @@ For each row in the application dataframe, we calculate the application processi
 We then use our network graph object to call the igraph methods that efficiently compute the centrality scores we intend to measure. In this case, as has been show in previous sections, we will explore 4 characteristics from each node: degree centrality, betweenness centrality, eigenvector centrality, and closeness centrality. Because closeness centrality turned out to hold null values for most of the nodes analyzed, we had to discard it from our variable selection for the model.  
  
 Afterwards, we joined the information we had gathered from each of the 283 nodes (each one representing a different examiner) back to the applications table. This left us with a final dataset size of 62,787 rows of application information to fit in the linear model. The designed model was a multivariate linear regression with the following formula: 
-
+ 
 
 ![Figure 5:](/Users/keelscruton/Desktop/Org Network Analysis/Screen Shot 2022-06-05 at 12.39.36 PM.png)
 **Figure 5: Linear Regression Model to Estimate the Relationship Between Variables and Application Processing Time**
