@@ -1,6 +1,6 @@
 ---
 title: "Ex5_contagion_KS"
-output: github_document
+output: pdf_document
 ---
 
 # Contagion: Simple vs complex
