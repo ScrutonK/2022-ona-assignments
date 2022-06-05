@@ -1,10 +1,10 @@
 ---
 title: "USPTO Project Report"
 output: github_document
----
+--- 
 **Submitted to:** Professor Roman Galperin 
 
-**By:** Keel Scruton (260433121), Yulin Hong (260898713), Carlos Fabbri Garcia (261018821), Justine Nadeau-Routhier (260483869) 
+**By:** Keel Scruton (260433121), Yulin Hong (260898713), Carlos Fabbri Garcia (261018821), Justine Nadeau-Routhier (260483869)     
 
 #### Introduction 
 
