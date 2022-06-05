@@ -6,7 +6,6 @@ USPTO Project Report
 **By:** Keel Scruton (260433121), Yulin Hong (260898713), Carlos Fabbri
 Garcia (261018821), Justine Nadeau-Routhier (260483869)
 
-<https://github.com/ScrutonK/2022-ona-assignments/blob/main/Screen%20Shot%202022-06-05%20at%2010.34.53%20AM.png>
 #### Introduction
 
 The United States Patent and Trademark Office (“USPTO”) is the federal
@@ -76,11 +75,11 @@ examiners make up a smaller minority. These results can be observed in
 figure 2.
 
 ![Figure 1: Gender Ratios of Selected
-Groups](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2010.34.53%20AM.png)
+Groups](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2010.34.53%20AM.png)
 **Figure 1: Gender Ratios of Selected Groups**
 
 ![Figure 2: Race Ratios of Selected
-Groups](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2010.36.18%20AM.png)
+Groups](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2010.36.18%20AM.png)
 **Figure 2: Race Ratios of Selected Groups**
 
 Creation of advice networks
@@ -110,7 +109,7 @@ representing instances of informational brokerage with certain examiners
 acting as the broker between the two groups.
 
 ![Figure 3: Directed Advice Network Graph with Node Size Showing Degree
-Centrality](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2010.38.32%20AM.png)
+Centrality](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2010.38.32%20AM.png)
 **Figure 3: Directed Advice Network Graph with Node Size Showing Degree
 Centrality**
 
@@ -129,7 +128,7 @@ connections, but who only seek advice do not contribute to efficient
 informational flow.  
 ![Figure 4: Directed Advice Network Graph with Node Size Showing
 Betweenness
-Centrality](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.34.11%20PM.png)
+Centrality](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.34.11%20PM.png)
 **Figure 4: Directed Advice Network Graph with Node Size Showing
 Betweenness Centrality**
 
@@ -172,7 +171,7 @@ rows of application information to fit in the linear model. The designed
 model was a multivariate linear regression with the following formula:
 
 ![Figure
-5:](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.39.36%20PM.png)
+5:](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.39.36%20PM.png)
 **Figure 5: Linear Regression Model to Estimate the Relationship Between
 Variables and Application Processing Time**
 
@@ -180,7 +179,7 @@ In total, there were 7 variables that we tested for significance in the
 model, as show in the table below:
 
 ![table
-1:](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.40.33%20PM.png)
+1:](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.40.33%20PM.png)
 
 **Table 1: Independent Variables Tested for Significance on the Model**
 
@@ -196,7 +195,7 @@ the target variable. The distribution of the target variable,
 application processing time, was plotted as a histogram to understand
 the trends of said metric.
 
-<img src="/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.42.24%20PM.png" width="350" height="350" />
+<img src="https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.42.24%20PM.png" width="350" height="350" />
 
 **Figure 6: Histogram for Application Processing Time (in days)**
 
@@ -213,7 +212,7 @@ sample or with the statistical universe. Still, the model reported some
 significant relationships between variables with a 95% confidence, thus
 we will present the total summary of our model.
 
-![](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.43.13%20PM.png)
+![](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.43.13%20PM.png)
 
 **Figure 7: R Generated Report of the Linear Model Fitted for Workgroups
 161 and 162 Combined**
@@ -277,7 +276,7 @@ tenure days and application processing times is statistically
 insignificant.
 
 ![Table
-2](/Users/keelscruton/Desktop/Org%20Network%20Analysis/2022-ona-assignments/Screen%20Shot%202022-06-05%20at%2012.52.16%20PM.png)
+2](https://raw.githubusercontent.com/ScrutonK/2022-ona-assignments/main/Screen%20Shot%202022-06-05%20at%2012.52.16%20PM.png)
 
 **Table 2: Implication of the Variables Regression Coefficients for
 Assessing their Effects on the Model**
