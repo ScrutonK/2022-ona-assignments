@@ -1,11 +1,11 @@
 Final_Report
 ================
 
-#Executive Summary
+# Executive Summary
 
-#Introduction
+# Introduction
 
-#Methodology Following a series of steps beginning with selecting the
+# Methodology Following a series of steps beginning with selecting the
 data and the characteristic variables, creating advice networks,
 carrying out calculations of centrality score and application processing
 time, our consulting team was able to develop a linear regression model
