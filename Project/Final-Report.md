@@ -1,15 +1,22 @@
-Final_Report
+USPTO Project Report
 ================
 
-# Executive Summary
+**Submitted to:** Professor Roman Galperin
 
-# Introduction
+**By:** Keel Scruton (260433121), Yulin Hong (), Carlos Fabbri Garcia
+(), Justine Nadeau-Routhier (260483869)
 
-# Methodology Following a series of steps beginning with selecting the
-data and the characteristic variables, creating advice networks,
-carrying out calculations of centrality score and application processing
-time, our consulting team was able to develop a linear regression model
-including network centrality and demographic attributes, and to provide
+#### Executive Summary
+
+#### Introduction
+
+#### Methodology
+
+Following a series of steps beginning with selecting the data and the
+characteristic variables, creating advice networks, carrying out
+calculations of centrality score and application processing time, our
+consulting team was able to develop a linear regression model including
+network centrality and demographic attributes, and to provide
 recommendations to the USPTO for improving the patent application
 process.
 
@@ -33,3 +40,6 @@ a race perspective and do not differ much from the average of the USPTO.
 White and Asian examiners are the most common group, while black and
 Hispanic examiners make up a smaller minority. These results can be
 observed in figure 2.
+
+![Figure
+1](http://127.0.0.1:33507/chunk_output/75FC38046DA13729/BFD813ED/cyhuc0d2dxx2m/000005.png')
