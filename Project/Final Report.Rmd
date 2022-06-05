@@ -1,6 +1,6 @@
 ---
 title: "USPTO Project Report"
-output: Github_document
+output: github_document
 ---
 **Submitted to:** Professor Roman Galperin 
 
