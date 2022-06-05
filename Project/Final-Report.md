@@ -6,6 +6,7 @@ USPTO Project Report
 **By:** Keel Scruton (260433121), Yulin Hong (260898713), Carlos Fabbri
 Garcia (261018821), Justine Nadeau-Routhier (260483869)
 
+<https://github.com/ScrutonK/2022-ona-assignments/blob/main/Screen%20Shot%202022-06-05%20at%2010.34.53%20AM.png>
 #### Introduction
 
 The United States Patent and Trademark Office (“USPTO”) is the federal
