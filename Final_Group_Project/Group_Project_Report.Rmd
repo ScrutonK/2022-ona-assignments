@@ -1,6 +1,6 @@
 ---
 title: "USPTO Project Report"
-output: github_document 
+output: pdf_document 
 --- 
 
 
